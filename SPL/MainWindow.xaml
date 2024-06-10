@@ -1,0 +1,54 @@
+﻿<Window x:Class="SPL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SmaartFroge" Height="500" Width="400"
+        Background="#333333" Foreground="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Product, Find Server button -->
+            <RowDefinition Height="Auto"/>
+            <!-- Device, Connect button -->
+            <RowDefinition Height="Auto"/>
+            <!-- Metric ComboBox -->
+            <RowDefinition Height="*"/>
+            <!-- SPLTextBlock, StatusImage -->
+            <RowDefinition Height="Auto"/>
+            <!-- StatusLabel -->
+            <RowDefinition Height="Auto"/>
+            <!-- DeviceStatusLabel -->
+        </Grid.RowDefinitions>
+
+        <!-- Product, Find Server button -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Content="Product" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="0,5"/>
+        <ComboBox x:Name="ProductComboBox" Width="150" Margin="5" SelectedIndex="0"/>
+        <Button x:Name="FindServerButton" Content="Find Server" Click="FindServerButton_Click" Margin="5" Width="70"/>
+        </StackPanel>
+
+        <!-- Device, Connect button -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="  Device" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Margin="0,5"/>
+            <ComboBox x:Name="DevicesComboBox" Width="150" Margin="5" SelectedIndex="0"/>
+            <Button x:Name="ConnectButton" Content="Connect" Click="ConnectButton_Click" Margin="5" Width="70"/>
+        </StackPanel>
+
+        <!-- Metric ComboBox -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="  Metric" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Margin="0,5"/>
+            <ComboBox x:Name="MetricsComboBox" Width="150" Margin="5" SelectedIndex="0"/>
+        </StackPanel>
+
+        <!-- SPLTextBlock and StatusImage -->
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Name="SPLTextBlock" FontSize="24" HorizontalAlignment="Center" Margin="0,5" TextAlignment="Center"  />
+            <Image Name="StatusImage" Width="180" Height="180" Margin="0,5"/>
+        </StackPanel>
+
+        <!-- StatusLabel -->
+        <Label x:Name="StatusLabel" Grid.Row="4" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="0,5"/>
+
+        <!-- DeviceStatusLabel -->
+        <Label x:Name="DeviceStatusLabel" Grid.Row="5" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="0,0,0,10"/>
+    </Grid>
+</Window>
